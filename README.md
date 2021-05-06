@@ -13,6 +13,6 @@ The idea is to model bidirectional data-flow with a user-provided value. It's no
 
 ## Third challenge: Flight booker
 
-The task is to build a combobox that allows you to select a flight type (one-way flight or return flight) and enter the date for it in a text input. The date must follow the format dd.mm.yyyy and the return date input should only be available if the flight type is a return flight.
+The task is to build a combobox that allows you to select a flight type (one-way flight or return flight) and enter the date for it in a text input. The date must follow the format dd.mm.yyyy and the return date input should only be available if the flight type is a return flight. Finally, an alert with the chosen flight type and date/s must be shown when clicked in a "Book" button.
 
 ## Fourth challenge: Timer (soon)
