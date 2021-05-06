@@ -1,0 +1,8 @@
+const actions = {
+    SET_TYPE_ONE_WAY: "SET_TYPE_ONE_WAY",
+    SET_TYPE_RETURN: "SET_TYPE_RETURN",
+    SET_DEPARTURE_DATE: "SET_DEPARTURE_DATE",
+    SET_RETURN_DATE: "SET_RETURN_DATE",
+}
+
+export default actions
