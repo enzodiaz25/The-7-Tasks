@@ -1,5 +1,5 @@
-# The-7-Tasks
-7 GUI challenges made in ReactJS. Each one being more complex than the previous one. You can read the challenges rules here: [Eugen Kiss - 7 GUI Tasks](https://eugenkiss.github.io/7guis/tasks/)
+# The 7 Tasks
+7 GUI challenges made in ReactJS. You can read the rules for the challenges here: [Eugen Kiss - 7 GUI Tasks](https://eugenkiss.github.io/7guis/tasks/)
 
 ## First challenge: Counter (not commited yet)
 
