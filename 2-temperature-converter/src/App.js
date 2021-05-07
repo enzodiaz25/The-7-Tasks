@@ -1,15 +1,6 @@
+import convertTemperatureTo from "./utils/convertTemperatureTo"
 import "./styles.css";
 import { useState } from "react";
-
-const convertTo = (toScale, tempValue) => {
-  switch (toScale) {
-    default:
-    case "farenheit":
-      return Math.round((tempValue - 32) * (5 / 9));
-    case "celsius":
-      return Math.round(tempValue * (9 / 5) + 32);
-  }
-};
 
 function Converter() {
   const [temp, setTemp] = useState({
@@ -21,7 +12,7 @@ function Converter() {
     const temp = e.target.value;
     if (temp) {
       const toTempScale = name === "celsius" ? "farenheit" : "celsius";
-      const convertedTemp = convertTo(toTempScale, temp);
+      const convertedTemp = convertTemperatureTo(toTempScale, temp);
       setTemp(() => ({
         [name]: temp,
         [toTempScale]: convertedTemp
@@ -35,26 +26,28 @@ function Converter() {
   }
 
   return (
-    <>
+    <div className="converter">
       <Temperature
-        name={"farenheit"}
+        label="Farenheit"
+        scale="farenheit"
         grades={temp.farenheit}
         handleChange={handleChange}
       />
       <Temperature
-        name={"celsius"}
+        label="Celsius"
+        scale="celsius"
         grades={temp.celsius}
         handleChange={handleChange}
       />
-    </>
+    </div>
   );
 }
 
-function Temperature({ name, grades, handleChange }) {
+function Temperature({ label, scale, grades, handleChange }) {
   return (
-    <div>
-      <label>{name}</label>
-      <input value={grades} onChange={(e) => handleChange(e, name)} />
+    <div className="temperature">
+      <label>{label}</label>
+      <input value={grades} onChange={(e) => handleChange(e, scale)} />
     </div>
   );
 }
